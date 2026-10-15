@@ -1,0 +1,25 @@
+export const pgn = [`[Event "FIDE World Championship Match 2024"]
+[Site "Singapore SGP"]
+[Date "2024.11.25"]
+[Round "1"]
+[White "Gukesh D"]
+[Black "Ding, Liren"]
+[Result "0-1"]
+[WhiteElo "2783"]
+[WhiteTitle "GM"]
+[WhiteFideId "46616543"]
+[BlackElo "2728"]
+[BlackTitle "GM"]
+[BlackFideId "8603677"]
+[TimeControl "40/7200:1800+30"]
+[Variant "Standard"]
+[ECO "C11"]
+[Opening "French Defense: Classical Variation, Steinitz Variation"]
+[BroadcastName "FIDE World Championship 2024"]
+[BroadcastURL "https://lichess.org/broadcast/fide-world-championship-2024/game-1/G2R2lPcA"]
+[GameURL "https://lichess.org/broadcast/fide-world-championship-2024/game-1/G2R2lPcA/TAq3z9DR"]
+
+1. e4 e6 2. d4 d5 3. Nc3 Nf6 4. e5 Nfd7 5. f4 c5 6. Nce2 Nc6 7. c3 a5 8. Nf3 a4 9. Be3 Be7 10. g4 Qa5 11. Bg2 a3 12. b3 cxd4 13. b4 Qc7 14. Nexd4 Nb6 15. O-O Nc4 16. Bf2 Bd7 17. Qe2 Nxd4 18. Nxd4 Nb2 19. Qe3 Rc8 20. Rac1 Qc4 21. f5 Qd3 22. Qe1 Bg5 23. Rc2 Rc4 24. h4 Bf4 25. Qb1 Rxc3 26. Rxc3 Qxc3 27. fxe6 fxe6 28. Ne2 Qxe5 29. Nxf4 Qxf4 30. Qc2 Qc4 31. Qd2 O-O 32. Bd4 Nd3 33. Qe3 Rxf1+ 34. Bxf1 e5 35. Bxe5 Qxg4+ 36. Bg2 Bf5 37. Bg3 Be4 38. Kh2 h6 39. Bh3 Qd1 40. Bd6 Qc2+ 41. Kg3 Qxa2 42. Be6+ Kh8 0-1
+
+
+`]
