@@ -6,7 +6,7 @@ import { getMoveOptions } from "../utils/getMoveOptions";
 export type NotationMode = "inside" | "outside" | "none";
 
 type Props = {
-  fen: string;
+  pgn: string;
   showPieces?: boolean;
   showMoveOptions?: boolean;
   notation?: NotationMode;
@@ -19,13 +19,24 @@ const FILES = "abcdefgh".split("");
 const RANKS = [8, 7, 6, 5, 4, 3, 2, 1];
 const NOTATION_TEXT = "text-sm sm:text-base";
 
+const getFen = (pgn: string, plies: number): string => {
+  const chess = new Chess();
+  chess.loadPgn(pgn);
+
+  const moves = chess.history({ verbose: true });
+  if (moves.length === 0) return chess.fen();
+
+  // Clamp in case the game is shorter than requested.
+  return moves[Math.min(plies, moves.length) - 1]?.after ?? moves[0].before;
+};
+
 export const Board = ({
-  fen,
+  pgn,
   showPieces = true,
   showMoveOptions = true,
   notation = "inside",
 }: Props) => {
-  const [position, setPosition] = useState(fen);
+  const [position, setPosition] = useState(getFen(pgn, 8));
   const [selected, setSelected] = useState<Square | null>(null);
   const [moveOptions, setMoveOptions] = useState<Square[]>([]);
   const [drag, setDrag] = useState<Drag | null>(null);
